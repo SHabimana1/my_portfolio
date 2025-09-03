@@ -11,7 +11,7 @@ on:
     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,5 +32,5 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Push image
         run: |
-          docker login -u shabimana1  -p ${secrets.REGISTRY_PASS}
+          docker login -u shabimana1  -p ${{secrets.REGISTRY_PASS}}
           docker push shabimana1/my_portfolio
