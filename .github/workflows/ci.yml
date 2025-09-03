@@ -23,7 +23,7 @@ jobs:
 
       - name: Push image
         run: |
-            docker login -u shabimana1 -p $ {{secrets.REGISTRY_PASS}}
+            docker login -u shabimana1 -p ${secrets.REGISTRY_PASS}
             docker push shabimana1/portfolio
          
         
